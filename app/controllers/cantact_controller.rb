@@ -1,0 +1,2 @@
+class CantactController < ApplicationController
+end
