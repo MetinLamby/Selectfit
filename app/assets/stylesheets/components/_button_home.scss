@@ -1,0 +1,28 @@
+.btn {
+  border-radius: 3px;
+}
+
+.btn-flat {
+  background: #ADD7F6;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .button {
+    p {
+      margin: 5px;
+    }
+  }
+}
+
+.btn-flat:hover {
+  background: #9BC2DD;
+  color: white;
+  .button {
+    p {
+      text-decoration: none;
+    }
+  }
+}

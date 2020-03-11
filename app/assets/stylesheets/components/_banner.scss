@@ -1,0 +1,23 @@
+#banner {
+  width: 100vw;
+  height: 100vh;
+  background: #4949FF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  h1 {
+    color: #ADD7F6;
+  }
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4949FF;
+  }
+}

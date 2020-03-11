@@ -5,3 +5,42 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require_relative("../lib/tasks/scrape")
+
+puts "deleting all fake products"
+Product.destroy_all
+
+products = scraper("https://de.gymshark.com/collections/t-shirts-tops/mens")
+
+
+products.each do |product|
+  item = Product.new(
+    link: product[:link],
+    colour: product[:colour],
+    price: product[:price],
+    brand: product[:brand],
+    product_type: "t-shirt",
+  )
+  item.save!
+end
+
+
+=begin
+puts "creating some fake products"
+10.times do
+  product = Product.new(
+    link: "test",
+    product_type: "t-shirt",
+    colour: "red",
+    price: 20,
+    description: "test description",
+    brand: "nike"
+    )
+  product.save!
+end
+=end
+
+puts "Created 10 prodcts"
+
+
+
