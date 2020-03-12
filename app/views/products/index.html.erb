@@ -1,4 +1,6 @@
 <% @products.each do |product| %>
+# dont link to the show page
+# use the object attribute link to link to the page of the the actual product
 <%= link_to product_path(product.id) do  %>
 <div class="product-index">
   <div class="card-product">

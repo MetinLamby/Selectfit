@@ -15,12 +15,14 @@ products = scraper("https://de.gymshark.com/collections/t-shirts-tops/mens")
 
 products.each do |product|
   item = Product.new(
+    name: product[:name],
     link: product[:link],
     colour: product[:colour],
     price: product[:price],
     brand: product[:brand],
     product_type: "t-shirt",
   )
+  #item.remote_photo_url = product[:photo][0]
   item.save!
 end
 
