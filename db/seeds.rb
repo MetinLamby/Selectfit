@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require_relative("../lib/tasks/scrape")
+require "open-uri"
+
 
 puts "deleting all fake products"
 Product.destroy_all
@@ -22,9 +24,14 @@ products.each do |product|
     brand: product[:brand],
     product_type: "t-shirt",
   )
-  #item.remote_photo_url = product[:photo][0]
-  item.save!
+  file = product[:photo]
+  fileOpen = URI.open(file)
+  item.photo.attach(io: fileOpen, filename: product[:name] + '.jpg', content_type: 'image/jpg')
+  puts item.photo.attached?
+  item.save
+  puts item.photo.attached?
 end
+
 
 
 =begin

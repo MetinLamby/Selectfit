@@ -19,6 +19,31 @@
 
 .btn-flat:hover {
   background: #9BC2DD;
+  .button {
+    p {
+      text-decoration: none;
+    }
+  }
+}
+
+
+.btn-flat-two {
+  background: #4949FF;
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-around;
+  .button {
+    p {
+      margin: 5px;
+    }
+  }
+}
+
+.btn-flat-two:hover {
+  background: #4343E8;
   color: white;
   .button {
     p {
@@ -26,3 +51,8 @@
     }
   }
 }
+
+
+
+
+

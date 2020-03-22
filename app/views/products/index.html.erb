@@ -1,15 +1,37 @@
-<% @products.each do |product| %>
-# dont link to the show page
-# use the object attribute link to link to the page of the the actual product
-<%= link_to product_path(product.id) do  %>
-<div class="product-index">
-  <div class="card-product">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-    <div class="card-product-infos">
-      <h2 style="text-transform: capitalize;"><%= product.product_type %></h2>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+<div class="product-compare-display">
+
+
+  <div class="left-product" style="background-image: url('<%= cl_image_path @product_left.photo.key, crop: :fill %>')">
+    <p>left</p>
+    <div class="buy-product">
+      <%= link_to product_path(@product_left) do%>
+      <div style="display: flex; align-items: center; justify-content: center; height: 100%">
+        <h5>Show Details</h5>
+      </div>
+      <% end %>
     </div>
   </div>
+
+
+
+
+
+  <div class="right-product" style="background-image: url('<%= cl_image_path @product_right.photo.key, crop: :fill %>')">
+    <p>right</p>
+    <div class="buy-product">
+      <%= link_to product_path(@product_right) do%>
+      <div style="display: flex; align-items: center; justify-content: center; height: 100%">
+        <h5>Show Details</h5>
+      </div>
+      <% end %>
+    </div>
+  </div>
+
+
+
 </div>
-<% end %>
-<% end %>
+
+
+
+
+

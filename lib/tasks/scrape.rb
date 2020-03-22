@@ -3,7 +3,6 @@ require 'nokogiri'
 
 
 def scraper(url)
-
   products = []
 
   html_file = open(url).read
@@ -15,7 +14,8 @@ def scraper(url)
     brand = "Gymshark"
     colour = product.search(".prod-caption a").first["title"].split(' - ')[1]
     price = product.search(".prod-caption .prod-price").text.strip.sub("€","").to_i
-    #photo = product.search(".athenaProductBlock_linkImage img").map {|tag| tag.attribute('src').value }
+    photoSuffix = product.search(".prod-image-wrap img").map {|tag| tag.attribute('src').value }[0]
+    photo = "https:" + photoSuffix
     suffix = product.search(".prod-image-wrap a").first["href"]
     link = "https://de.gymshark.com" + suffix
     products << {
@@ -24,12 +24,11 @@ def scraper(url)
       colour: colour,
       price: price,
       brand: brand,
-      #photo: photo
+      photo: photo
     }
   end
   return products
 end
-
 
 
 

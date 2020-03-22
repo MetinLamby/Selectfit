@@ -1,6 +1,18 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all
+    products = Product.all
+    products.each do |product|
+      if product != nil
+        @product_left = product
+        break
+      end
+    end
+    products.each do |product|
+      if product != nil && @product_left != product
+        @product_right = product
+        break
+      end
+    end
   end
 
   def show
@@ -16,5 +28,9 @@ class ProductsController < ApplicationController
     # count the clicks
     # after 10 clicks, show the product
     # decide whether to buy or to keep selecting
+  end
+
+  def article_params
+    params.require(:product).permit(:name, :link, :colour, :photo, :price, :brand, :product_type)
   end
 end
