@@ -1,1 +1,84 @@
 // Specific CSS for your home-page
+
+.how-it-works {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  width: 100vw;
+  h3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
+.how-div {
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //margin-bottom: 100px;
+  .how-desc {
+    //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 200px;
+    width: 390px;
+    //background: white;
+    margin-right: -50px;
+    z-index: 2;
+    //border: 2px solid #FF0010;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    transition: margin-bottom .3s ease;
+    margin-top: 40px;
+    p {
+      color: black;
+    }
+    h4 {
+      color: #FF0010;
+    }
+  }
+  .how-desc-right {
+    //box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    height: 200px;
+    width: 390px;
+    //background: white;
+    margin-right: -50px;
+    z-index: 2;
+    //border: 2px solid #FF0010;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    transition: margin-bottom .3s ease;
+    margin-top: 40px;
+    p {
+      color: black;
+    }
+    h4 {
+      color: #FF0010;
+    }
+  }
+  .how-pic {
+    height: 400px;
+    width: 600px;
+    //background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), image_url("team.jpg");
+    background-size: cover;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    p {
+      color: transparent;
+    }
+  }
+}
+
+.how-div:hover .how-desc {
+  margin-bottom: 25px;
+}
+
+.how-div:hover .how-desc-right{
+  margin-bottom: 25px;
+}

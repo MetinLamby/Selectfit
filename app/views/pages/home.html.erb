@@ -1,17 +1,81 @@
+<div id="small-banner">
+  <h1>Shop the Fun way.</h1>
+</div>
+
+
+
+
+<div class="how-it-works">
+  <div style="width: 80%;">
+    <h3>Here’s how it works:</h3>
+    <div class="container how-div">
+      <div class="how-desc">
+        <div>
+          <h4>1. Use The Filter</h4>
+          <p>Tell us about your item preferences and we'll customize your shopping experience.</p>
+        </div>
+      </div>
+      <div class="how-pic">
+            <%= render "use-filter.svg" %>
+      </div>
+    </div>
+    <div class="container how-div">
+      <div class="how-pic">
+        <%= render "compare.svg" %>
+      </div>
+      <div class="how-desc-right">
+        <div>
+          <h4>2. Choose Your Preference</h4>
+          <p>You'll be given two products to compare. Which one do you prefer?</p>
+        </div>
+      </div>
+    </div>
+    <div class="container how-div">
+      <div class="how-desc">
+        <div>
+          <h4>3. Purchase The Item If You Like It</h4>
+          <p>Purchase the item if you like it. If you don't, just keep choosing your preference.</p>
+        </div>
+      </div>
+      <div class="how-pic">
+        <%= render "purchase-item.svg" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="start-btn-div">
+<%= link_to products_path do %>
+<div class="start-btn">
+  <p>Lets get started</p>
+</div>
+<% end %>
+</div>
+
+<div style="height: 100vh;">
+  <p>work in progress</p>
+</div>
+
+
+<!--
 <div id="banner">
   <div style="width: auto;">
     <div class="text">
       <h1><i class="fas fa-filter"></i></h1>
       <h1>Selectfit</h1>
     </div>
-    <%= link_to products_path do %>
+    <%#= link_to products_path do %>
     <div class="link btn btn-flat">
       <div class="button">
         <p>Get started</p>
       </div>
     </div>
-    <% end %>
+    <%# end %>
   </div>
 </div>
+-->
+
+
 
 

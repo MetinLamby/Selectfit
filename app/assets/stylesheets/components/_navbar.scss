@@ -9,25 +9,27 @@
 }
 
 #nav {
-  background: transparent;
+  background: white;
   transition: background 300ms linear;
 }
 
 .navbar-lewagon {
   justify-content: space-between;
-  height: 80px;
+  height: 50px;
   padding: 0px 32px;
   display: flex;
 }
 
 .nav-bar-logo {
-  color: #FF6B6B !important;
-  width: 300px !important;
+  color: black !important;
   display: flex;
   align-items: center;
   justify-content: space-around;
   h3 {
-    color: #FF6B6B !important;
+    color: black !important;
+    margin-bottom: 0;
+    font-weight: lighter;
+    font-size: 23px;
   }
 }
 
@@ -96,7 +98,7 @@
 
 
 .nav-link:hover {
-  color: #FF6B6B !important;
+  text-decoration: underline;
 }
 
 .sign-out{
@@ -129,5 +131,6 @@
   color: black;
 /*  if box is full use: color: #FF6B6B;*/
 }
+
 
 
