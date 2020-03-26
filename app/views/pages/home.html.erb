@@ -7,7 +7,7 @@
 
 <div class="how-it-works">
   <div style="width: 80%;">
-    <h3>Here’s how it works:</h3>
+    <h1>Here’s How It Works:</h1>
     <div class="container how-div">
       <div class="how-desc">
         <div>
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="how-pic">
-            <%= render "use-filter.svg" %>
+        <%= render "use-filter.svg" %>
       </div>
     </div>
     <div class="container how-div">
@@ -34,7 +34,7 @@
       <div class="how-desc">
         <div>
           <h4>3. Purchase The Item If You Like It</h4>
-          <p>Purchase the item if you like it. If you don't, just keep choosing your preference.</p>
+          <p>If you are not happy yet, just keep comparing it to other items until you found the right fit for you!</p>
         </div>
       </div>
       <div class="how-pic">
@@ -46,17 +46,54 @@
 
 
 <div class="start-btn-div">
-<%= link_to products_path do %>
-<div class="start-btn">
-  <p>Lets get started</p>
-</div>
-<% end %>
-</div>
-
-<div style="height: 100vh;">
-  <p>work in progress</p>
+  <%= link_to products_path do %>
+  <div class="start-btn">
+    <p>Lets get started</p>
+  </div>
+  <% end %>
 </div>
 
+<div class="with-you">
+  <div class="with-you-txt">
+    <h1>We're With You</h1>
+    <p id="with-you-para">Online shopping should be fun and easy. Seeing many fashion items at once can stress us. So, we're trying to give you the fun shopping experience you were looking for to make your life easyier. Are you ready to try it?</p>
+    <%= link_to products_path do %>
+    <div class="start-btn-gnrl">
+      <p>Let's try it</p>
+    </div>
+    <% end %>
+  </div>
+  <div class="with-you-img">
+    <h1>placeholder</h1>
+  </div>
+</div>
+
+<div class="most-popular-div">
+  <h1>Our Most Popular Items</h1>
+  <div class="most-popular">
+    <div class="popular-element" style="background-image: url('<%= cl_image_path @product_first.photo.key, crop: :fill %>')">
+      <h3>01</h3>
+    </div>
+    <div class="popular-element" style="background-image: url('<%= cl_image_path @product_second.photo.key, crop: :fill %>')">
+      <h3>02</h3>
+    </div>
+    <div class="popular-element" style="background-image: url('<%= cl_image_path @product_third.photo.key, crop: :fill %>')">
+      <h3>03</h3>
+    </div>
+    <div class="popular-element" style="background-image: url('<%= cl_image_path @product_fourth.photo.key, crop: :fill %>')">
+      <h3>04</h3>
+    </div>
+  </div>
+</div>
+
+<div class="get-started">
+  <h1>Are You Ready To Get Started?</h1>
+  <%= link_to products_path do %>
+  <div class="start-btn-gnrl">
+    <p>Let's get started</p>
+  </div>
+  <% end %>
+</div>
 
 <!--
 <div id="banner">
