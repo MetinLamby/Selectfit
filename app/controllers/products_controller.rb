@@ -1,18 +1,39 @@
 class ProductsController < ApplicationController
   def index
+
     products = Product.all
+    products_disliked = []
+
+    @product_zero = products[0]
+    @product_one = products[1]
+    @product_two = products[2]
+    @product_three = products[3]
+    @product_four = products[4]
+    @product_five = products[5]
+    @product_six = products[6]
+    @product_seven = products[7]
+    @product_eight = products[8]
+    @product_nine = products[9]
+
+=begin
     products.each do |product|
-      if product != nil
+      if products.include?(product) && !products_disliked.include?(product)
         @product_left = product
         break
       end
     end
+
+
+
+
     products.each do |product|
       if product != nil && @product_left != product
         @product_right = product
         break
       end
     end
+=end
+
   end
 
   def show
