@@ -104,6 +104,19 @@
       </div>
     </div>
 
+
+
+
+    <div class="dont-like" id="last-option">
+      <h1>You still don't like the product?</h1>
+      <%= link_to products_path do %>
+      <div class="start-btn-gnrl">
+        <p>No, keep choosing</p>
+      </div>
+      <% end %>
+    </div>
+
+
   </div>
 </div>
 
@@ -117,6 +130,7 @@
   var elementsix = document.getElementById("prod-six");
   var elementseven = document.getElementById("prod-seven");
   var elementeight = document.getElementById("prod-eight");
+  var lastOption = document.getElementById("last-option");
 
   var arr = [];
 
@@ -132,41 +146,49 @@
   elementOne.addEventListener("click", function(){
     elementOne.style.visibility = "hidden";
     myFunction();
+    myFunctionTwo()
   });
 
   elementTwo.addEventListener("click", function(){
     elementTwo.style.visibility = "hidden"
     myFunction();
+    myFunctionTwo()
   });
 
   elementThree.addEventListener("click", function(){
     elementThree.style.visibility = "hidden";
     myFunction();
+    myFunctionTwo()
   });
 
   elementFour.addEventListener("click", function(){
     elementFour.style.visibility = "hidden";
     myFunction();
+    myFunctionTwo()
   });
 
   elementfive.addEventListener("click", function(){
     elementfive.style.visibility = "hidden";
     myFunction();
+    myFunctionTwo()
   });
 
   elementsix.addEventListener("click", function(){
     elementsix.style.visibility = "hidden"
     myFunction();
+    myFunctionTwo()
   });
 
   elementseven.addEventListener("click", function(){
     elementseven.style.visibility = "hidden";
     myFunction();
+    myFunctionTwo()
   });
 
   elementeight.addEventListener("click", function(){
     elementeight.style.visibility = "hidden";
     myFunction();
+    myFunctionTwo()
   });
 
 
@@ -179,9 +201,40 @@
     }
 
     if (counter == arr.length - 1) {
-      alert("We found your product!");
+      for (i = 0; i < arr.length; i++) {
+        if (!(arr[i].style.visibility == "hidden")) {
+          //arr[i].style.left = "45px";
+
+          arr[i].style.left ="0";
+          arr[i].style.right ="0";
+          arr[i].style.marginLeft ="auto";
+          arr[i].style.marginRight ="auto";
+          //arr[i].style.width ="";
+          //arr[i].style.height ="100%";
+
+
+
+          //alert("We found your product!");
+          //lastOption.style.visibility = "visible";
+        }
+      }
     }
   }
+
+  function myFunctionTwo() {
+    var counter = 0;
+    for (i = 0; i < arr.length; i++) {
+      if (arr[i].style.visibility == "hidden") {
+        counter++;
+      }
+    }
+
+    if (counter == arr.length) {
+      lastOption.style.visibility = "visible";
+    }
+  }
+
+
 
 </script>
 
